@@ -7,7 +7,7 @@ module.exports = {
 
   // entry를 기준으로 연관된 모든 파일들을 번들링
   entry: {
-    main: './src/App.jsx',
+    main: './src/index.jsx',
     // By default, the output filename for the entry chunk is extracted from output.filename but you can specify a custom output filename for a specific entry:
     // home: { import: './contact.js', filename: 'pages/[name][ext]' },
     // about: { import: './about.js', filename: 'pages/[name][ext]' },
@@ -55,7 +55,6 @@ module.exports = {
   devServer: {
     static: path.join(__dirname, 'build'), // 이 경로에 있는 파일이 변경될 때 다시 컴파일
     port: 8088, // 서버 포트 지정
-    overlay: true,
     hot: true,
   },
 
